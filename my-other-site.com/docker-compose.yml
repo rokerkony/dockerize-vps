@@ -1,0 +1,17 @@
+nginx:
+    build: ./nginx/
+    ports:
+        - 8082:80
+    links:
+        - php
+    volumes_from:
+        - php
+    environment:
+        - VIRTUAL_HOST=my-other-site.com,www.my-other-site.com
+
+php:
+    build: ./php/
+    expose:
+        - 9000
+    volumes:
+        - /srv/www/my-other-site.com:/var/www/html

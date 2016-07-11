@@ -1,0 +1,17 @@
+nginx:
+    build: ./nginx/
+    ports:
+        - 8081:80
+    links:
+        - php
+    volumes_from:
+        - php
+    environment:
+        - VIRTUAL_HOST=konradcerny.cz,www.konradcerny.cz
+
+php:
+    build: ./php/
+    expose:
+        - 9000
+    volumes:
+        - /srv/www/konradcerny.cz:/var/www/html
