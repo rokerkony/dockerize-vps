@@ -7,4 +7,4 @@ Example show 2 applications:
 Application code should be located in `/srv/www/konradcerny.cz` or `/srv/www/my-other-site.com`.
 Content of these folders will linked as a volume to proper image.
 
-For more information follow this article on [medium.com](http://...)
+For more information follow this article on [medium.com](https://medium.com/@rokerkony/how-to-set-your-vps-with-docker-containers-for-multiple-websites-55524e59cae1)
